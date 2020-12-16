@@ -1,0 +1,17 @@
+sub solution {
+    my ($X, @A)=@_;
+    # write your code in Perl 5.18
+    if ($X==1){
+        return 0;
+    }
+    my %hash;
+    my $count =0;
+    foreach my $tmp(@A){
+        $hash{$tmp} = $count;
+        if (keys %hash == $X){
+            return $count;
+        }
+        $count++;
+    }
+
+}

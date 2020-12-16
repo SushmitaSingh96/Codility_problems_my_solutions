@@ -1,0 +1,17 @@
+use strict;
+use warnings;
+use List::Util qw(max);
+use List::Util qw(min);
+
+sub solution {
+    my (@A)=@_;
+    # write your code in Perl 5.18
+    my $min = min @A;
+    my $max = max @A;
+    my $sum1 = $max*(2*$min+$max-1)/2;
+    my $sum2 = 0;
+    foreach (@A){
+        $sum2+=$_;
+    }
+    return $sum1-$sum2;
+}

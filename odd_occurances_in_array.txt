@@ -1,0 +1,18 @@
+sub solution {
+    my (@A)=@_;
+    # write your code in Perl 5.18
+    my %arr;
+    foreach my $k(@A){
+        if ($arr{$k}){
+            $arr{$k}++;
+        }
+        else{
+            $arr{$k}=1;
+        }
+    }
+    foreach my $k(keys %arr){
+        if ($arr{$k} == 1){
+            return $k;
+        }
+    }
+}
